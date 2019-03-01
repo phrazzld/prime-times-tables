@@ -38,6 +38,8 @@ def primes_multiplication_table(primes)
     primes_table.push(row)
     i += 1
   end
+  primes.unshift(0)
+  primes_table.unshift(primes)
   return primes_table
 end
 
@@ -50,10 +52,6 @@ end
 n = ARGV[0].to_i
 primes = n_primes(n)
 primes_table = primes_multiplication_table(primes)
-
-# Add header
-primes.unshift(0)
-primes_table.unshift(primes)
 
 # Print table
 print_table(primes_table)
