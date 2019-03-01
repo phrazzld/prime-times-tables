@@ -43,8 +43,8 @@ end
 
 # Format and print a 2D array
 def print_table(table)
-  width = primes_table.flatten.max.to_s.size+2
-  puts primes_table.map { |a| a.map { |i| i.to_s.rjust(width) }.join }
+  width = table.flatten.max.to_s.size+2
+  puts table.map { |a| a.map { |i| i.to_s.rjust(width) }.join }
 end
 
 n = ARGV[0].to_i
